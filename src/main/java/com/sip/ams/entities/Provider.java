@@ -25,18 +25,26 @@ public class Provider {
 	@Column(name = "email")
 	private String email;
 
-	@Column(name = "picByte", length = 3000)
-	private byte[] picByte;
+	@Column(name = "nomImage")
+	private String nomImage;
 
 	public Provider() {
 	}
 
-	public Provider(String name, String address, String email, byte[] picByte) {
+	public Provider(String name, String address, String email, String nomImage) {
 		this.name = name;
 		this.address = address;
 		this.email = email;
-		this.picByte = picByte;
+		this.nomImage = nomImage;
 
+	}
+
+	public String getNomImage() {
+		return nomImage;
+	}
+
+	public void setNomImage(String nomImage) {
+		this.nomImage = nomImage;
 	}
 
 	public void setId(long id) {
@@ -69,18 +77,6 @@ public class Provider {
 
 	public String getAddress() {
 		return address;
-	}
-
-	public byte[] getPicByte() {
-
-		return picByte;
-
-	}
-
-	public void setPicByte(byte[] picByte) {
-
-		this.picByte = picByte;
-
 	}
 
 }
